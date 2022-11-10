@@ -30,7 +30,7 @@ const ProfileScreen = ({ navigation: {navigate} }) => {
       <IconButton icon="square-edit-outline" color="black" size={30} 
       //position top right corner
       style={{position: 'absolute', top: 0, right: 0, margin: 10}}
-      onPress={() => navigate("EditProfileScreen", {name: name, location: location, setName: setName, setLocation: setLocation, setInterests: setInterests})} 
+      onPress={() => navigate("EditProfileScreen", {name: name, location: location})} 
       
       />
       <Avatar.Image size={100} source={require('../assets/profileDP.png')} style={{
