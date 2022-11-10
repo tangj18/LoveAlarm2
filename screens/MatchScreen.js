@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, Image } from "react-native";
+import { Text, View, StyleSheet, Image, ScrollView } from "react-native";
 import * as React from "react";
 import { LinearGradient } from 'expo-linear-gradient';
 
@@ -13,6 +13,7 @@ const MatchScreen = ({ navigation, route }) => {
          style={styles.background}
          start={{ x: 0, y: 0.4 }}
        />
+       <ScrollView>
        <Text
          style={{
            color: "black",
@@ -123,6 +124,7 @@ const MatchScreen = ({ navigation, route }) => {
            <Text style={{ color: "black", fontSize: 16 }}>Connect</Text>
          </Button>
        </View>
+       </ScrollView>
      </View>
    );
 };
