@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, View, Image, StyleSheet } from "react-native";
+import { SafeAreaView, Text, View, Image, StyleSheet, Animated } from "react-native";
 import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -36,8 +36,8 @@ const HomeScreen = ({ navigation }) => {
         borderRadius: 10,
         backgroundColor: '#FBC9F9',
       }}
-      onPress={() => navigation.navigate("TabMain")}
-      ><Text style={{ color: "#587A8C", fontSize: 20}}>Find A Match</Text></Button>
+      onPress={() => navigation.navigate("LoginPage")}
+      ><Text style={{ color: "#587A8C", fontSize: 20}}>Login</Text></Button>
     </View>
   );
 };
