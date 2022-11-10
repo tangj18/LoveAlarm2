@@ -39,27 +39,29 @@ const EditProfileScreen = ({ navigation, route }) => {
       >
         <Text >Upload Image</Text>
       </Button>
+      <ScrollView>
       <View style={{
         justifyContent: "center",
         alignItems: "center",
       }}>
-        <ScrollView>
+        
       <TextInput
         label="Name"
-        style={{width: "100%", marginTop: 20, height: 50}}
+        style={{width: "90%", marginTop: 20, height: 50}}
       />
       <TextInput
         label="Birthday"
-        style={{width: "100%", marginTop: 20, height: 50}}
+        style={{width: "90%", marginTop: 20, height: 50}}
       />
       {/* create a form to edit name, age, location, and interests */}
+
       <TextInput
         label="Location"
-        style={{width: "100%", marginTop: 20, height: 50}}
+        style={{width: "90%", marginTop: 20, height: 50}}
       />
       <TextInput
         label="Interests"
-        style={{width: "100%", marginTop: 20, height: 100}}
+        style={{width: "90%", marginTop: 20, height: 100}}
       />
       <Button mode="contained" style={{
         borderRadius: 10,
@@ -69,8 +71,9 @@ const EditProfileScreen = ({ navigation, route }) => {
       }}
       onPress={() => navigation.goBack()}
       ><Text style={{ color: "#587A8C", fontSize: 20}}>Save</Text></Button>
-      </ScrollView>
+      
       </View>
+      </ScrollView>
     </View>
     );
 }
