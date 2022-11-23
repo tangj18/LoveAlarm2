@@ -19,121 +19,122 @@ const SignUpPage = ({ navigation }) => {
         start={{ x: 0, y: 0.4 }}
       />
       <Image source={require("../assets/lovealarm.png")} style={styles.image} />
-      <ScrollView style={{
-        marginTop: 50,
-        paddingRight: 10,
-        paddingLeft: 10,
-        width: "100%",
-      }}>
-        <Text style={{
+      {/* align text left and make it clickable*/}
+
+      <Text
+        style={{
+          color: "Black",
+          fontSize: 20,
+          alignSelf: "flex-start",
+          paddingLeft: 10,
+          marginBottom: -40,
+          marginTop: 10,
+          textDecorationLine: "underline",
+        }}
+        onPress={() => navigation.navigate("Home")}
+      >
+        Cancel
+      </Text>
+
+      <ScrollView
+        style={{
+          marginTop: 50,
+          paddingRight: 10,
+          paddingLeft: 10,
+          width: "100%",
+        }}
+      >
+        <Text
+          style={{
             fontSize: 20,
             fontWeight: "bold",
-        }}>Login Information</Text>
+            marginTop: 30
+          }}
+        >
+          Login Information
+        </Text>
         <TextInput
-            placeholder="Username"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="First Name"
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Email"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="Last Name"
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Password"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="Email"
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Password Confirmation"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
-        />
-        <Text style={{
-            fontSize: 20,
-            fontWeight: "bold",
-        }}>Profile Information</Text>
-        <TextInput
-            placeholder="Full Name"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="Phone Number"
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Age"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="Birthday"
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Location"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-                height: 50
-            }}
+          placeholder="Password"
+          secureTextEntry={true}
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
         <TextInput
-            placeholder="Interests"
-            placeholderTextColor="#587A8C"
-            style={{
-                margin: 10,
-            }}
-            multiline
-            numberOfLines={4}
+          placeholder="Confirm Password"
+          secureTextEntry={true}
+          placeholderTextColor="#587A8C"
+          style={{
+            margin: 10,
+            height: 50,
+          }}
         />
+        
         {/* align two buttons side by side */}
-        <View style={{
+        <View
+          style={{
             flexDirection: "row",
             justifyContent: "space-between",
             marginBottom: 20,
             marginTop: 10,
             marginRight: 20,
             marginLeft: 20,
-            
-        }}>
-            <Button 
-            mode="contained"
-            style={{
-                borderRadius: 10,
-                backgroundColor: "#DC9292",
-                width: "40%",
-                alignSelf: "flex-end",
-
-            }}
-            onPress={() => navigation.goBack()}
+          }}
         >
-            <Text style={{ color: "#587A8C", fontSize: 16 }}>Cancel</Text>
-        </Button>
-        <Button 
+          <Button
             mode="contained"
             style={{
-                borderRadius: 10,
-                backgroundColor: "#AAE387",
-                width: "40%",
-                alignSelf: "flex-end",
-
+              borderRadius: 10,
+              backgroundColor: "#faafec",
+              width: "100%",
+              alignSelf: "center",
             }}
             onPress={() => navigation.navigate("TabMain")}
-        >
-            <Text style={{ color: "#587A8C", fontSize: 16 }}>Sign Up</Text>
-        </Button>
+          >
+            <Text style={{ color: "black", fontSize: 16}}>Sign Up</Text>
+          </Button>
         </View>
       </ScrollView>
     </View>

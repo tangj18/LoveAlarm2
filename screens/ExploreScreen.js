@@ -238,7 +238,7 @@ const ExploreScreen = ({ navigation, route }) => {
           color={"#F6FFB1"}
           mode="outlined"
           onPress={() => {
-            if (counter !== 0) {
+            if (matched) {
               setCounter(0);
               setSearch(false);
               setMatched(false);

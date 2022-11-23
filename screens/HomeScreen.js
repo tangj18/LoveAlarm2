@@ -34,10 +34,20 @@ const HomeScreen = ({ navigation }) => {
 
       <Button mode="contained" style={{
         borderRadius: 10,
-        backgroundColor: '#FBC9F9',
+        backgroundColor: '#faafec',
+        paddingRight:10,
+        paddingLeft:10,
       }}
       onPress={() => navigation.navigate("LoginPage")}
       ><Text style={{ color: "#587A8C", fontSize: 20}}>Login</Text></Button>
+      
+      <Button mode="contained" style={{
+        borderRadius: 10,
+        backgroundColor: '#faafec',
+        marginTop: 10
+      }}
+      onPress={() => navigation.navigate("SignUpPage")}
+      ><Text style={{ color: "#587A8C", fontSize: 20}}>Sign Up</Text></Button>
     </View>
   );
 };

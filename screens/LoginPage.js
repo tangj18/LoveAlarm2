@@ -39,7 +39,7 @@ const LoginPage = ({ navigation }) => {
         mode="contained"
         style={{
           borderRadius: 10,
-          backgroundColor: "#FBC9F9",
+          backgroundColor: "#faafec",
           marginTop: 30,
         }}
         onPress={() => navigation.navigate("TabMain")}

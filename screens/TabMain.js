@@ -36,12 +36,16 @@ const TabMain = ({ navigation, route }) => {
           fontWeight: "bold",
         },
         headerTitleAlign: "center",
-        headerRight: () => (
+        headerLeft: () => (
           <IconButton
             icon="logout"
             onPress={() => navigation.navigate("Home")}
             color="#F6FFB1"
             size={30}
+            style={{
+              //flip 180 degrees
+              transform: [{ rotate: "180deg" }],
+            }}
           />
         ),
       }}
