@@ -238,15 +238,12 @@ const ExploreScreen = ({ navigation, route }) => {
           color={"#F6FFB1"}
           mode="outlined"
           onPress={() => {
-            if (matched) {
+            
               setCounter(0);
               setSearch(false);
               setMatched(false);
               navigation.navigate("MatchScreen");
-            } else {
-              //do nothing
-              console.log("do nothing");
-            }
+            
           }}
           style={{ backgroundColor: "red", marginTop: 20 }}
         />
