@@ -394,7 +394,7 @@ numberOfLines={1}
            </Button>
            <Button
              mode="contained"
-             onPress={() => navigation.goBack()}
+             onPress={() => navigation.navigate("QuestionnaireScreen")}
              color="#40ed51"
              style={{ width: "35%", marginRight: 30 }}
            >
