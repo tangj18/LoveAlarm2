@@ -1,5 +1,6 @@
 {
   "expo": {
+    "sdkVersion": "45.0.0",
     "name": "LoveAlarm2",
     "slug": "LoveAlarm2",
     "version": "1.0.0",
