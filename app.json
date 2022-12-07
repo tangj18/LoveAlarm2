@@ -4,7 +4,6 @@
     "name": "LoveAlarm2",
     "slug": "LoveAlarm2",
     "version": "1.0.0",
-    "sdkVersion": "47.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
