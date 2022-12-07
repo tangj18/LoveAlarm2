@@ -67,74 +67,12 @@ const ProfileScreen = ({ navigation: {navigate} }) => {
         style={styles.background}
         start={{ x: 0, y: 0.4 }}
       />
-      <View>
       
-        <ScrollView
-          horizontal // Change the direction to horizontal
-          pagingEnabled // Enable paging
-          onScroll={change} // Add this prop
-          showsHorizontalScrollIndicator={false}
-        >
-          {images.map((image, index) => {
-            if (image.type == "video") {
-              return (
-                <Video
-                key={index}
-                  ref={video}
-                  style={styles.video}
-                  source={image.link}
-                  useNativeControls
-                  resizeMode="contain"
-                  isLooping
-                  onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-                  style={{
-                    width,
-                    height,
-                  }}
-                />
-              );
-            } else {
-              return (
-                <Image
-                  key={index}
-                  source={image.link}
-                  style={{
-                    width,
-                    height,
-                  }}
-                />
-              );
-            }
-          })}
-        </ScrollView>
-      </View>
-      <View
-        style={{
-          flexDirection: "row",
-          position: "absolute",
-          Top: 0,
-          alignSelf: "center",
-          marginTop: 250,
-        }}
-      >
-        {images.map((image, index) => {
-          return (
-            <Text
-              key={index}
-              style={
-                index == active ? styles.pagingActiveText : styles.pagingText
-              }
-            >
-              ⬤
-            </Text>
-          );
-        })}
-      </View>
       
       <View
         style={{
-          height: "52%",
-          marginTop: 5,
+          height: "100%",
+          
         }}
       >
         <ScrollView>
@@ -149,7 +87,69 @@ const ProfileScreen = ({ navigation: {navigate} }) => {
           navigate("EditProfileScreen", { name: name, location: location })
         }
       />
-
+<View>
+      
+      <ScrollView
+        horizontal // Change the direction to horizontal
+        pagingEnabled // Enable paging
+        onScroll={change} // Add this prop
+        showsHorizontalScrollIndicator={false}
+      >
+        {images.map((image, index) => {
+          if (image.type == "video") {
+            return (
+              <Video
+              key={index}
+                ref={video}
+                style={styles.video}
+                source={image.link}
+                useNativeControls
+                resizeMode="contain"
+                isLooping
+                onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+                style={{
+                  width,
+                  height,
+                }}
+              />
+            );
+          } else {
+            return (
+              <Image
+                key={index}
+                source={image.link}
+                style={{
+                  width,
+                  height,
+                }}
+              />
+            );
+          }
+        })}
+      </ScrollView>
+    </View>
+    <View
+      style={{
+        flexDirection: "row",
+        position: "absolute",
+        Top: 0,
+        alignSelf: "center",
+        marginTop: 250,
+      }}
+    >
+      {images.map((image, index) => {
+        return (
+          <Text
+            key={index}
+            style={
+              index == active ? styles.pagingActiveText : styles.pagingText
+            }
+          >
+            ⬤
+          </Text>
+        );
+      })}
+    </View>
 
           <Card
             style={{
