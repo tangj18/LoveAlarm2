@@ -21,24 +21,11 @@ const SignUpPage = ({ navigation }) => {
       <Image source={require("../assets/lovealarm.png")} style={styles.image} />
       {/* align text left and make it clickable*/}
 
-      <Text
-        style={{
-          color: "Black",
-          fontSize: 20,
-          alignSelf: "flex-start",
-          paddingLeft: 10,
-          marginBottom: -40,
-          marginTop: 10,
-          textDecorationLine: "underline",
-        }}
-        onPress={() => navigation.navigate("Home")}
-      >
-        Cancel
-      </Text>
+      
 
       <ScrollView
         style={{
-          marginTop: 50,
+          marginTop: 10,
           paddingRight: 10,
           paddingLeft: 10,
           width: "100%",
@@ -122,13 +109,24 @@ const SignUpPage = ({ navigation }) => {
             marginRight: 20,
             marginLeft: 20,
           }}
-        >
+        ><Button
+        mode="contained"
+        style={{
+          borderRadius: 10,
+          backgroundColor: "red",
+          width: "40%",
+          alignSelf: "center",
+        }}
+        onPress={() => navigation.navigate("TabMain")}
+      >
+        <Text style={{ color: "black", fontSize: 16}}>Cancel</Text>
+      </Button>
           <Button
             mode="contained"
             style={{
               borderRadius: 10,
               backgroundColor: "#faafec",
-              width: "100%",
+              width: "40%",
               alignSelf: "center",
             }}
             onPress={() => navigation.navigate("TabMain")}
@@ -166,7 +164,7 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   image: {
-    marginTop: 40,
+    marginTop: 50,
     height: "7%",
     resizeMode: "contain",
   },
