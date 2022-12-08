@@ -92,7 +92,6 @@ const MatchScreen = ({ navigation, route }) => {
                       <Video
                       ref={video}
                       key={index}
-                      style={styles.video}
                       source={image.link}
                       useNativeControls
                       resizeMode="contain"
@@ -152,7 +151,6 @@ numberOfLines={1}
              width: 150,
              height: 150,
              borderRadius: 25,
-             border: "solid",
              borderColor: "#587A8C",
              borderWidth: 2,
              position: "absolute",

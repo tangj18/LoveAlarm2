@@ -117,7 +117,7 @@ const SignUpPage = ({ navigation }) => {
           width: "40%",
           alignSelf: "center",
         }}
-        onPress={() => navigation.navigate("TabMain")}
+        onPress={() => navigation.goBack()}
       >
         <Text style={{ color: "black", fontSize: 16}}>Cancel</Text>
       </Button>

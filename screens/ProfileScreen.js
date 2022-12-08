@@ -107,10 +107,6 @@ const ProfileScreen = ({ navigation: {navigate} }) => {
                 resizeMode="contain"
                 isLooping
                 onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-                style={{
-                  width,
-                  height,
-                }}
               />
             );
           } else {
@@ -257,8 +253,7 @@ const ProfileScreen = ({ navigation: {navigate} }) => {
             <Card.Content>
               <Text
                 style={{
-                  fontSize: 20,
-                  border: "1px solid black",
+                  fontSize: 20
                 }}
               >
                  Interests
@@ -454,8 +449,8 @@ const styles = StyleSheet.create({
   },
   video: {
     alignSelf: 'center',
-    width: 320,
-    height: 200,
+    width,
+    height,
   },
 });
 export default ProfileScreen;

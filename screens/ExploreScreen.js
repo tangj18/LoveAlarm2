@@ -108,7 +108,7 @@ const ExploreScreen = ({ navigation, route }) => {
             <View>
               <Image
                 source={require("../assets/rose.png")}
-                style={styles.image}
+                
                 style={{
                   
                   width: 322,
